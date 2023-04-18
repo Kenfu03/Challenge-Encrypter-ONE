@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE-edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="style.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <main>
+      <div class="main-container">
+        <div class="img-container">
+          <img src="/assets/img/logo.png" alt="logo App" />
+        </div>
+        <div class="form-container">
+          <div class="input-container">
+            <span
+              id="text"
+              class="textarea"
+              role="textbox"
+              contenteditable
+            ></span>
+          </div>
+          <div class="decorationP">
+            <img id="warning1" src="assets/img/errorLogo.svg" alt="" />
+            <p class="warning" id="warning2">Solo letras minúsculas y sin acentos</p>
+          </div>
+          <div class="button-container">
+            <button onclick="encryptFunction()" class="btn_encriptar">
+              Encriptar
+            </button>
+            <button onclick="decryptFunction()" class="btn_desencriptar">
+              Desencriptar
+            </button>
+          </div>
+        </div>
+        <div class="info-container">
+          <div class="noText" id="noText">
+            <img src="assets/img/enigmaMachine.png" alt="Maquina Enigma" />
+            <div class="text_info">
+              <h2>
+                Ningún mensaje fue <br />
+                encontrado
+              </h2>
+              <p>
+                Ingresa el texto que desees encriptar o <br />
+                desencriptar.
+              </p>
+            </div>
+          </div>
+          <div class="withText" id="withText" style="display: none">
+            <span
+              id="workingText"
+              class="workingText"
+              role="textbox"
+            ></span>
+            <div class="btnCopy-container">
+              <button onclick="copyText()">Copiar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="main.js"></script>
+  </body>
+</html>
